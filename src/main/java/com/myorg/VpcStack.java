@@ -8,6 +8,8 @@ import software.constructs.Construct;
 
 public class VpcStack extends Stack {
 
+    private Vpc vpc;
+
     public VpcStack(final Construct scope, final String id) {
         this(scope, id, null);
     }
@@ -15,10 +17,14 @@ public class VpcStack extends Stack {
     public VpcStack(final Construct scope, final String id, final StackProps props) {
         super(scope, id, props);
 
-        Vpc.Builder.create(this, "Vpc01")
+        vpc = Vpc.Builder.create(this, "Vpc01")
                 .maxAzs(1) // zona de disponibilidade
                 .natGateways(0) // somente para diminuir o custo, pois pago por hora
                 .build();
+    }
+
+    public Vpc getVpc() {
+        return vpc;
     }
 
 }
