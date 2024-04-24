@@ -1,18 +1,21 @@
-# Welcome to your CDK Java project!
+# Aws CDK CloudFormation
 
-This is a blank project for CDK development with Java.
+## deploy
+- listar
+```bash
+cdk list
+```
+- deploy
+```bash
+cdk deploy Vpc Cluster Service01
+```
+- mostra a diferença
+```bash
+cdk diff
+```
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
-
-## Useful commands
-
- * `mvn package`     compile and run tests
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
-
-Enjoy!
+- destruir os services
+```bash
+# cdk destroy <nome_do_service>
+cdk destroy Vpc Cluster Service01
+```
