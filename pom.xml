@@ -4,13 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.myorg</groupId>
-    <artifactId>aws_cdk</artifactId>
+    <artifactId>curso_aws_cdk</artifactId>
     <version>0.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cdk.version>2.138.0</cdk.version>
-        <ec2.version>1.12.408</ec2.version>
+        <cdk.version>2.103.1</cdk.version>
         <constructs.version>[10.0.0,11.0.0)</constructs.version>
         <junit.version>5.7.1</junit.version>
     </properties>
@@ -31,24 +30,11 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.myorg.AwsCdkApp</mainClass>
+                    <mainClass>com.myorg.CursoAwsCdkApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>com.springsource.repository.bundles.release</id>-->
-<!--            <name>SpringSource Enterprise Bundle Repository - SpringSource Bundle Releases</name>-->
-<!--            <url>http://repository.springsource.com/maven/bundles/release</url>-->
-<!--        </repository>-->
-<!--        <repository>-->
-<!--            <id>com.springsource.repository.bundles.external</id>-->
-<!--            <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>-->
-<!--            <url>http://repository.springsource.com/maven/bundles/external</url>-->
-<!--        </repository>-->
-<!--    </repositories>-->
 
     <dependencies>
         <!-- AWS Cloud Development Kit -->
@@ -58,43 +44,24 @@
             <version>${cdk.version}</version>
         </dependency>
 
-
-
-<!--        <dependency>-->
-<!--            <groupId>software.amazon.awscdk</groupId>-->
-<!--            <artifactId>ec2</artifactId>-->
-<!--            <version>${ec2.version}</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>software.amazon.awscdk</groupId>-->
-<!--            <artifactId>ec2</artifactId>-->
-<!--            <version>1.12.408</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>software.amazon.awssdk</groupId>-->
-<!--            <artifactId>ecs</artifactId>-->
-<!--            <version>2.25.35</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>software.amazon.awscdk</groupId>-->
-<!--            <artifactId>ecs-patterns</artifactId>-->
-<!--            <version>1.204.0</version>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>software.constructs</groupId>-->
-<!--            <artifactId>constructs</artifactId>-->
-<!--            <version>${constructs.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>software.constructs</groupId>
+            <artifactId>constructs</artifactId>
+            <version>${constructs.version}</version>
+        </dependency>
 
         <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter</artifactId>
-          <version>${junit.version}</version>
-          <scope>test</scope>
+            <groupId>software.amazon.awscdk</groupId>
+            <artifactId>ec2</artifactId>
+            <version>1.95.1</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
